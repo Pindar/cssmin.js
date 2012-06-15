@@ -1,1 +1,1 @@
-@import "bar.css";
+@import url('bar.css') projection, tv;
