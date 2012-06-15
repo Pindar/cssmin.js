@@ -27,10 +27,15 @@ function writeFile(filename, content) {
         quit(1);
     }
     
+    if (!outputFile) {
+        print('cssmin: couldn\'t write output file ' + outputFile);
+        quit(1);
+    }
+    
     combinededInput = SD.combineCss(input);
     
     output = YAHOO.compressor.cssmin(combinededInput, linebreakpos);
     writeFile(outputFile, output);
-    print("done");
+    print('done');
 
 }(arguments));
