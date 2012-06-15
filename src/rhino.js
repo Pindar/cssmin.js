@@ -18,8 +18,8 @@ function writeFile(filename, content) {
         combinededInput = "",
         path = "";
 
-    if (!name) {
-        print('No files present in the fileset; Check your pattern match in build.xml');
+    if (!name || !outputFile) {
+        print('Please add a name of an input file and a name of an output file as argument.');
         quit(1);
     }
 
@@ -31,11 +31,6 @@ function writeFile(filename, content) {
 
     if (!input) {
         print('cssmin: couldn\'t open file ' + name);
-        quit(1);
-    }
-
-    if (!outputFile) {
-        print('cssmin: couldn\'t write output file ' + outputFile);
         quit(1);
     }
 
