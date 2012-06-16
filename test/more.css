@@ -1,3 +1,5 @@
 .my-class {
 	width: 42px;
 }
+
+@import "print.css" print;

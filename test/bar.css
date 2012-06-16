@@ -1,1 +1,9 @@
-@import "more.css" print;
+.test {
+	width: 200px;
+}
+
+@import "more.css";
+
+.testbar {
+	height: 300px;
+}

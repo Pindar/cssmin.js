@@ -5,6 +5,9 @@ VERSION = 1.0
 SRC = src
 RHINO = dist/cssmin-rhino-${VERSION}.js
 
+test: rhino
+	make -i -C test
+
 rhino:
 	@@mkdir -p dist
 	@@touch ${RHINO}

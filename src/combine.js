@@ -3,7 +3,7 @@ var SD = SD || {};
 
 SD.combineCss = function (css) {
     "use strict";
-    var regex = /@import?\s+[\S\s]*;$/g;
+    var regex = /@import?\s+\S*;/g;
 
     function replaceImportIn(css1) {
         return css1.replace(regex, function (str) {
